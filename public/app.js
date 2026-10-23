@@ -26,7 +26,7 @@ function updateSelection(announce=true){
     if(destination&&destination!=='#'){anchor.href=destination;anchor.removeAttribute('aria-disabled');}
     else{anchor.removeAttribute('href');anchor.setAttribute('aria-disabled','true');}
   }
-  $('#photo-link').setAttribute('aria-label',pending?`${active.label}: awaiting your photographs`:`${active.action}: ${headline(item.title)} (opens in a new tab)`);
+  $('#photo-link').setAttribute('aria-label',pending?`${active.label}: awaiting your photographs`:`${active.action}: ${headline(item.title)}`);
   $('#destination').textContent=destination?`${active.action} ↗`:'Destination coming soon';
   $('#collection-note').textContent=pending?'A curated collection is on its way.':active.description;
   $('#empty-brand').textContent='THE GLOW UP FOUND';
@@ -103,7 +103,7 @@ async function init(){
     const detail=document.createElement('small');detail.textContent=c.description;
     const state=document.createElement('span');state.className='link-state';state.textContent=c.url?'Explore ↗':'Link coming soon';
     link.append(name,detail,state);
-    if(c.url){link.href=safeURL(c.url);link.target='_blank';link.rel='noopener noreferrer';}
+    if(c.url){link.href=safeURL(c.url);link.rel='noopener noreferrer';}
     else link.setAttribute('aria-disabled','true');
     $('#destination-links').append(link);
   }

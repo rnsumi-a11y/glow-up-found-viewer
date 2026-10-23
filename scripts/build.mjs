@@ -1,13 +1,18 @@
 import fs from 'node:fs/promises';
-for(const name of ['homebody','substack','instagram']){
-  const feed=JSON.parse(await fs.readFile(`public/data/${name}.json`,'utf8'));
-  if(!feed.items?.length)throw Error(`${name}: no items`);
-  if(new Set(feed.items.map(p=>p.id)).size!==feed.items.length)throw Error(`${name}: duplicate items`);
+const site=JSON.parse(await fs.readFile('public/data/site.json','utf8'));
+const https=value=>{try{return new URL(value).protocol==='https:';}catch{return false;}};
+for(const collection of site.collections){
+  if(collection.url!==null&&!https(collection.url))throw Error(`${collection.key}: invalid destination`);
+  const feed=JSON.parse(await fs.readFile(`public/data/${collection.key}.json`,'utf8'));
+  if(feed.status!=='curated'||!Array.isArray(feed.items))throw Error(`${collection.key}: expected curated collection`);
+  if(new Set(feed.items.map(p=>p.id)).size!==feed.items.length)throw Error(`${collection.key}: duplicate items`);
   for(const item of feed.items){
-    if(!item.title||!item.url.startsWith('https://'))throw Error(`${name}: invalid content`);
-    if(item.image?.startsWith('/'))await fs.access(`public${item.image}`);
+    if(!item.id||!item.title||!https(item.url)||(!item.image&&!item.imagePending))throw Error(`${collection.key}: incomplete content`);
+    if(!item.image)continue;
+    if(item.image.startsWith('/'))await fs.access(`public${item.image}`);
+    else if(!https(item.image))throw Error(`${collection.key}: invalid image`);
   }
-  console.log(`${name}: ${feed.items.length} valid items (${feed.status})`);
+  console.log(`${collection.key}: ${feed.items.length} curated items${collection.url?'':'; destination pending'}`);
 }
 await fs.access('public/assets/viewer-source.png');
-console.log('Static site ready in public/; Vercel builds api/feed.js separately.');
+console.log('Static site ready in public/. No automatic feeds.');

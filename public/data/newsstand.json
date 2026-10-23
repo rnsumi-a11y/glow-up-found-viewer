@@ -1,0 +1,13 @@
+{
+  "status": "curated",
+  "items": [
+    {
+      "id": "glow-up-found-newsstand",
+      "title": "The Glow Up Found Newsstand",
+      "url": "https://the-glow-up-found.vercel.app/",
+      "image": "/assets/glow-up-found-newsstand.jpg",
+      "preserveFullImage": true,
+      "imageAlt": "Pink and lavender Newsstand card featuring a Revolve magazine cover and the title The Glow Up Found Newsstand."
+    }
+  ]
+}

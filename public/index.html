@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f3f3f1">
-  <meta name="description" content="A few different ways to see my world. Explore Homebody Studios, Le Index, and life lately through an interactive vintage picture viewer.">
-  <title>Anna Noelle Rinke — View-Master</title>
+  <meta name="theme-color" content="#f8f2e9">
+  <meta name="description" content="THE GLOW UP FOUND. Finding the glow in the in-between. Personal style, essays, and The Newsstand through a vintage picture viewer.">
+  <title>THE GLOW UP FOUND — A Point of View</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <a class="skip-link" href="#advance">Skip to viewer</a>
-  <main class="stage" aria-label="Anna Noelle Rinke's picture viewer">
-    <h1 class="identity label">Anna Noelle Rinke</h1>
+  <main class="stage" aria-label="THE GLOW UP FOUND picture viewer">
+    <header class="identity"><p class="eyebrow label">A personal edit of style &amp; stories</p><h1>THE GLOW UP FOUND</h1><p class="tagline">Finding the glow in the in-between.</p></header>
     <nav class="reel-library" aria-label="Choose a reel">
       <div id="spare-reels"></div>
       <p class="choose-label label">Choose a reel</p>
@@ -25,21 +25,23 @@
           <clipPath id="personal-label"><path d="M744 411 Q816 379 889 411 L853 480 Q818 458 780 480 Z"/></clipPath>
         </defs>
         <image href="/assets/viewer-source.png" width="1672" height="941" clip-path="url(#viewer-outline)"/>
-        <image href="/assets/annas-point-of-view.jpg" x="728" y="372" width="183" height="111.3" preserveAspectRatio="none" clip-path="url(#personal-label)"/>
+        <g clip-path="url(#personal-label)"><path d="M728 372H911V484H728Z" fill="#e9cebf"/><path d="M728 383Q819 355 911 383V495H728Z" fill="#f2dfc5"/><g fill="#352822" text-anchor="middle" font-family="Georgia,serif" font-weight="700"><text x="818" y="420" font-size="12">THE GLOW</text><text x="818" y="437" font-size="12">UP FOUND</text></g></g>
+        <g aria-hidden="true"><rect x="686" y="766" width="278" height="27" rx="6" fill="#282725" stroke="#55514b" stroke-width="1"/><text x="825" y="784" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" letter-spacing="1.3" fill="#d4c3b0">THE GLOW UP FOUND</text></g>
         <text id="viewer-label" display="none" x="819" y="432" text-anchor="middle">LE INDEX</text>
         <text id="viewer-frame" display="none" x="819" y="453" text-anchor="middle">02</text>
       </svg>
       <button id="advance" class="advance" aria-label="Advance to next picture" title="Next picture (right arrow)"><span class="sr-only">Next picture</span></button>
       <div class="advance-hint" aria-hidden="true"><span>click to<br>advance</span><svg viewBox="0 0 45 72"><path d="M12 3 Q39 36 16 61 M14 50 L15 63 L26 57"/></svg></div>
-      <div class="controls"><button id="previous" class="previous" aria-label="Previous picture" title="Previous picture (left arrow)">←</button><p id="counter" class="counter label">02 / 20</p><button id="next" class="next" aria-label="Next picture">→</button></div>
+      <div class="controls"><button id="previous" class="previous" aria-label="Previous picture" title="Previous picture (left arrow)">←</button><p id="counter" class="counter label">01 / 01</p><button id="next" class="next" aria-label="Next picture">→</button></div>
     </section>
     <section class="selected-view" aria-label="Selected picture">
-      <a id="photo-link" class="photo-mount" target="_blank" rel="noopener noreferrer"><img id="selected-image" alt="" fetchpriority="high"><div id="empty-photo" hidden><span>HOMEBODY</span><span id="empty-location"></span><small>Studio photographs coming soon</small></div></a>
-      <div class="selected-copy"><h2 id="selected-title"></h2><a id="destination" class="destination label" target="_blank" rel="noopener noreferrer">Read on Substack <span aria-hidden="true">↗</span></a><p id="collection-note" class="collection-note"></p></div>
+      <a id="photo-link" class="photo-mount" rel="noopener noreferrer"><img id="selected-image" alt="" fetchpriority="high"><div id="empty-photo" hidden><span id="empty-brand">THE GLOW UP FOUND</span><span id="empty-location"></span><small>Your personal edit, coming into focus.</small></div></a>
+      <div class="selected-copy"><h2 id="selected-title"></h2><a id="destination" class="destination label" rel="noopener noreferrer">Link coming soon <span aria-hidden="true">↗</span></a><p id="collection-note" class="collection-note"></p></div>
     </section>
     <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
   </main>
-  <footer><span>Three reels. A little look around.</span><a id="source-link" href="https://github.com/annanoellerinke/anna-view-master" target="_blank" rel="noopener noreferrer">Make your own ↗</a></footer>
+  <nav class="direct-links" aria-label="Explore all destinations"><p class="label">Explore The Glow Up Found</p><div id="destination-links"></div></nav>
+  <footer><span>THE GLOW UP FOUND</span><span>Finding the glow in the in-between.</span></footer>
   <script type="module" src="/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+{
+  "brand": "THE GLOW UP FOUND",
+  "collections": [
+    {
+      "key": "instagram",
+      "label": "INSTAGRAM",
+      "subtitle": "STYLE \u00b7 OUTFITS \u00b7 BEAUTY",
+      "number": 1,
+      "action": "Explore Instagram",
+      "description": "Personal style, outfits, and beauty.",
+      "url": "https://www.instagram.com/theglowupfound",
+      "sceneLabels": [
+        "Personal style",
+        "Outfits",
+        "Beauty"
+      ]
+    },
+    {
+      "key": "substack",
+      "label": "SUBSTACK",
+      "subtitle": "ESSAYS & EDITORIAL",
+      "number": 2,
+      "action": "Read on Substack",
+      "description": "Essays and editorial stories.",
+      "url": "https://theglowupfound.substack.com",
+      "sceneLabels": [
+        "Essays",
+        "Stories",
+        "Editorial"
+      ]
+    },
+    {
+      "key": "newsstand",
+      "label": "THE NEWSSTAND",
+      "subtitle": "THE MAGAZINE EDIT",
+      "number": 3,
+      "action": "Visit The Newsstand",
+      "description": "A magazine-style view of my world.",
+      "url": "https://the-glow-up-found.vercel.app",
+      "sceneLabels": [
+        "The magazine",
+        "The edit",
+        "A point of view"
+      ]
+    }
+  ]
+}

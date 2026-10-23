@@ -29,3 +29,15 @@
   .spare{top:4.88px}
   .spare:nth-child(2){top:102.48px}
 }
+
+/* THE GLOW UP FOUND — a warm editorial frame for the vintage viewer. */
+:root{--paper:#f8f2e9;--ink:#302620;--blush:#e5bab8;--serif:Didot,'Bodoni MT',Georgia,serif}
+body{background:radial-gradient(ellipse at 50% 38%,#fffcf7 10%,#f8f2e9 62%,#eddfd6 100%)}
+.identity{top:3%;font-size:inherit}.identity h1{font-family:var(--serif);font-size:clamp(23px,2.2vw,38px);font-weight:400;letter-spacing:.085em;margin:8px 0}.eyebrow{font-size:10px;letter-spacing:.2em;margin:0}.tagline{font-size:clamp(14px,1.15vw,19px);font-style:italic;margin:0;color:#7f625a}
+.viewer{top:18%}.spare{top:25%}.spare:nth-child(2){top:47%}.selected-view{top:32%}.choose-label{top:92%}
+.photo-mount{background:#fffaf3;box-shadow:1px 7px 18px #51342618,inset 0 0 0 1px #e7d4c6}
+#empty-photo{background:linear-gradient(140deg,#f1d6cf,#eaded0);color:#594137;min-height:230px;gap:20px}#empty-photo>span:first-child{font-size:clamp(18px,1.7vw,29px);line-height:1.35;max-width:210px}#empty-location{font-size:10px;letter-spacing:.18em}#empty-photo small{font-style:italic;font-family:var(--serif);font-size:14px}
+h2{font-family:var(--serif)}.destination{font-size:11px}.destination[aria-disabled=true]{color:#88746b;border-color:#d6bdb2;cursor:default}.photo-mount[aria-disabled=true]{cursor:default}.direct-links{max-width:1060px;margin:55px auto 48px;padding:0 28px;text-align:center}.direct-links>p{font-size:10px;letter-spacing:.2em;color:#806258;margin:0 0 22px}#destination-links{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #d9c3b7}.direct-link{display:flex;flex-direction:column;gap:12px;padding:26px 16px;text-decoration:none}.direct-link+.direct-link{border-left:1px solid #d9c3b7}.direct-link>span:first-child{font:500 12px var(--label);letter-spacing:.12em}.direct-link small{font:italic 16px var(--serif);line-height:1.4}.link-state{font:10px var(--label);letter-spacing:.08em;color:#826359}.direct-link[href]:hover{background:#efd7d266}footer{max-width:1100px;color:#806f65;letter-spacing:.08em}button:focus-visible,a:focus-visible{outline-color:#aa7272}
+@media(min-width:901px){.stage{width:min(100%,1400px);aspect-ratio:1672/1030}.controls{top:101%}.choose-label{top:90%}.direct-links{margin-top:28px}}
+@media(max-width:900px){.stage{padding-top:155px}.identity{top:30px}.identity h1{font-size:29px}.tagline{font-size:17px}.viewer{top:auto}.selected-view{top:auto}.spare{top:66px}.spare:nth-child(2){top:228.8px}.choose-label{top:auto}.direct-links{margin-top:18px}}
+@media(max-width:540px){.stage{padding-top:136px;row-gap:58px}.identity{top:27px}.identity h1{font-size:24px;letter-spacing:.045em}.eyebrow{font-size:8px}.tagline{font-size:15px}.spare{top:4.88px}.spare:nth-child(2){top:102.48px}.selected-view{width:88%}.direct-links{padding:0 24px;margin-bottom:30px}#destination-links{grid-template-columns:1fr}.direct-link{padding:22px 10px;gap:9px}.direct-link+.direct-link{border-left:0;border-top:1px solid #d9c3b7}footer{flex-direction:column;align-items:center;text-align:center;gap:8px}footer>span{max-width:none}}

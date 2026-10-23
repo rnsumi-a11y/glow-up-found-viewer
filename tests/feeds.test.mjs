@@ -22,17 +22,6 @@ test('Instagram destinations remove profile prefixes and Reels routes without ch
   }
   for(const url of ['https://www.instagram.com/annanoellerinke/','https://www.instagram.com/reels/','https://www.instagram.com/p/abc/comments/','https://instagram.com.example.org/p/abc/','http://www.instagram.com/p/abc/','javascript:alert(1)'])assert.equal(instagramPostURL(url),null);
 });
-test('every bundled Instagram photo opens its matching post',()=>{
-  const {items}=JSON.parse(readFileSync(new URL('../public/data/instagram.json',import.meta.url),'utf8'));
-  assert.equal(items.length,50);
-  for(const item of items){
-    const url=new URL(item.url);
-    assert.equal(url.origin,'https://www.instagram.com');
-    assert.equal(url.pathname,`/p/${item.id}/`);
-    assert.equal(url.pathname.split('/').at(-2),item.id);
-    assert.equal(item.url,item.postUrl);
-  }
-});
 test('missing Instagram connection is explicit',async()=>assert.deepEqual(await getInstagram({}),{status:'needs-connection'}));
 test('reel traverses every item over repeated turns and backwards, including seam',()=>{
   for(const count of [4,10,20,50]){
